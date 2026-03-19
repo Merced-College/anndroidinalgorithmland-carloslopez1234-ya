@@ -1,3 +1,6 @@
+ // Carlos Lopez
+ // 3-19-26
+
 package level1;
 
 import java.util.ArrayList;
@@ -43,3 +46,22 @@ public class LeaderboardAlgorithms {
         return -1;
     }
 }
+
+
+  public static void sortByUsernameAscending(ArrayList<ScoreEntry> list) {
+	  for (int i = 1; i < list.size(); i++) {
+	         // Find index of smallest remaining element
+	         int j= i;
+	         
+	          while (j>0 && list.get(j).getScore()> list.get(j-1).getScore()) {
+	        	  
+	        	// Swap numbers[i] and numbers[indexSmallest]
+	               ScoreEntry temp = list.get(j);
+	               list.set(j,list.get(j-1));
+	                      list.set(j-1, temp);
+	                       j--;
+	           }
+
+	          }
+	   
+  
